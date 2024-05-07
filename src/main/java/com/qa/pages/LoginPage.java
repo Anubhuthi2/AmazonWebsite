@@ -44,7 +44,7 @@ public class LoginPage extends TestBase {
 		wait.until(ExpectedConditions.visibilityOf(element));
 	}
 	
-	public HomePage login(String user,String pass) throws InterruptedException {
+	public HomePage login(String user,String pass) {
 		ex_wait(HelloSignin);
 		Actions action =new Actions(driver);
 		action.moveToElement(HelloSignin).perform();
@@ -60,7 +60,7 @@ public class LoginPage extends TestBase {
 		password.sendKeys(pass);
 		signinBtn.click();
 		
-		return new HomePage();
+		return new HomePage(driver , wait);
 	}
 	
 
