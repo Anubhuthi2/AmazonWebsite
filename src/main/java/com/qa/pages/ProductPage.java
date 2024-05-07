@@ -1,5 +1,7 @@
 package com.qa.pages;
 
-public class ProductPage {
+import com.amazon.qa.base.TestBase;
+
+public class ProductPage extends TestBase {
 
 }

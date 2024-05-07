@@ -1,5 +1,13 @@
 package com.qa.pages;
 
-public class HomePage {
+import org.openqa.selenium.support.FindBy;
+
+import com.amazon.qa.base.TestBase;
+
+public class HomePage extends TestBase {
+	
+	//Page factory :OR
+	//@FindBy 
+	
 
 }
