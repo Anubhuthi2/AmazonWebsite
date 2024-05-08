@@ -49,7 +49,7 @@ public class TestBase{
 		driver.manage().window().maximize();
 		driver.manage().deleteAllCookies();
 		driver.manage().timeouts().pageLoadTimeout(20,TimeUnit.SECONDS);
-		wait = new WebDriverWait(driver, Duration.ofSeconds(30));
+		wait = new WebDriverWait(driver, Duration.ofSeconds(40));
 		
 		driver.get(prop.getProperty("url"));
 		

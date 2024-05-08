@@ -35,7 +35,7 @@ public class HomePage extends TestBase{
 		wait.until(ExpectedConditions.textToBePresentInElement(HelloUsername, prop.getProperty("name")));
 		searchbox.sendKeys(product);
 		searchbox.sendKeys(Keys.RETURN);
-		return new ProductListPage();
+		return new ProductListPage(driver,wait);
 	}
 	
 	
