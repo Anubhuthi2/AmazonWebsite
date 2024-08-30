@@ -20,6 +20,7 @@ public class TestBase{
 	public static WebDriver driver;
 	public static Properties prop;
 	public static WebDriverWait wait;
+	protected String currentHandle;
 	
 	public TestBase() {
 		try {
@@ -55,5 +56,8 @@ public class TestBase{
 		
 	}
 	
+	public static WebDriver getDriver() {
+        return driver;
+    }
 
 }

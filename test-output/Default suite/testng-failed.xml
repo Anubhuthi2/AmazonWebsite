@@ -3,12 +3,12 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.amazon.qa.tests.ProductListPageTest">
+      <class name="com.amazon.qa.tests.ProductPageTest">
         <methods>
-          <include name="SearchingForBrand"/>
+          <include name="addingToCart"/>
           <include name="setUp"/>
         </methods>
-      </class> <!-- com.amazon.qa.tests.ProductListPageTest -->
+      </class> <!-- com.amazon.qa.tests.ProductPageTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

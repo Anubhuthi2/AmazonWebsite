@@ -16,7 +16,7 @@ public class ProductListPage extends TestBase {
 	@FindBy(xpath= "//span[contains(@class ,'a-size-base-plus a-color-base') and text() = 'boAt'][1]")
 	WebElement BoAtWatch;
 	
-	@FindBy(xpath="//span[contains(@class ,'a-size-base-plus a-color-base') and text() = 'boAt'][1]/following::span[contains(text() ,'boAt Xtend Smart Watch with Alexa Built-in, 1.69” HD Display, Multiple Watch Faces, Stress Monitor, Heart & SpO2 Monitoring, 14 Sports Modes, Sleep Monitor, 5 ATM & 7 Days Battery(Pitch Black)')]")
+	@FindBy(xpath="//span[contains(@class ,'a-size-base-plus a-color-base a-text-normal')][1]")
     WebElement BoAtWatchClickableElement;	
 	
 	public ProductListPage(WebDriver driver ,WebDriverWait wait) {
@@ -25,14 +25,11 @@ public class ProductListPage extends TestBase {
 		PageFactory.initElements(driver, this);
 	}
 		
-	public void Ex_Wait(WebElement element) {
-		wait.until(ExpectedConditions.visibilityOf(element));
-	}
-		
-	public ProductPage findingParticularProduct(String brand) {
-		((JavascriptExecutor)driver).executeScript("arguments[0].scrollIntoView(true);", BoAtWatch);
+	public ProductPage findingParticularProduct() {
+		currentHandle = driver.getWindowHandle();
+		((JavascriptExecutor)driver).executeScript("arguments[0].scrollIntoView(true);", BoAtWatchClickableElement);
 		BoAtWatchClickableElement.click();
-		return new ProductPage();
+		return new ProductPage(driver,wait);
 	}
 		
 		
